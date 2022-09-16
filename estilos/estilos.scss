@@ -118,15 +118,27 @@ article{
     background-color: $color3;
     color: #006D77;
 }
-#listauno{
-    display: inline-block;
-    padding: 20px;
+#galeryflex{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: $color3;
+    color: $color1;
+    text-align: center;
+    font-weight: bolder;
+
+
 }
-#listados{
-    display: inline-block;
-    padding: 20px;
+.column{
+    flex: 25%;
+    padding: 5px;
 }
-.menugrid{
+.gf{
+    width: 100%;
+    height: 200px;
+    margin-bottom: 25px;
+}
+#menugrid{
     width: 100%;
     height: auto;
     background-color: $color3;
@@ -225,14 +237,26 @@ footer{
         color: white;
     }
 }
+@media only screen and (max-width:750px){
+    .column{
+        flex: 50%;
+    }
+
+}
+@media only screen and (max-width:450px){
+    .column{
+        flex: 100%;
+    }
+
+}
 @media only screen and (min-width:480px){
-    .menugrid{
+    #menugrid{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(4, 200px);
     }
 }
 @media only screen and (min-width:600px){
-    .menugrid{
+    #menugrid{
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(4, 200px);
     }
