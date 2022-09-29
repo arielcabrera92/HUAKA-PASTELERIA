@@ -2,6 +2,7 @@ $color1: #2c5c8b;
 $color2: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
 $color3: #ffddd2;
 $color4: #e29578;
+$color5: #8EC5FC;
 $font1: 'Raleway';
 $font2: 'Square Peg';
 
@@ -10,27 +11,7 @@ $font2: 'Square Peg';
     padding: 0;
     box-sizing: border-box;
 }
-$mapa: (
-    10px: white,
-    20px: red,
-    30px: blue,
-    40px: yellow
-);
-@each $size, $color in $mapa {
-    .btn--#{$size} {
-        background-color: $color4;
-        height: 200px;
-        width: 100%;
-        border: solid 2px black;
-        text-align: center;
-        font-size: $size;
-        line-height: 200px;
-        color: $color;
-        text-transform: uppercase;
-        border-radius: 10px;
-        padding: 20px;
-    }
-}
+
 body{
     font-family: $font1;
     font-weight: bold;
@@ -41,7 +22,7 @@ body{
     font-weight: bold;
 }
 .jumbotron{
-    background-color: #8EC5FC;
+    background-color: $color5;
     background-image: $color2; 
     border-radius: 0%;
     margin-bottom: 0;
@@ -51,6 +32,23 @@ header{
         text-transform: uppercase;
         font-size: 20px !important;
     }
+}
+.hg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    img{
+        height: 150px;
+        margin-right: 10px;
+    }
+}
+.headertext{
+    align-items: center;
 }
 h1{
     font-family: $font2;
@@ -82,7 +80,7 @@ article{
     border: #8EC5FC solid 2px;
 }
 .img-fluid{
-    padding: 20px;
+    padding: 10px;
     height: 250px;
     width: auto;
 }
@@ -150,18 +148,30 @@ article{
 }
 .item{
     width: 100%;
-    border: 2px solid #8EC5FC;
+    border: 2px solid $color5;
     text-align: center;
     font-size: 30px;
     font-family: 'Square Peg';
-    color: black;
     border-radius: 7px;
+}
+.titulogrid{
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-size: 50px;
 
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    background-color: rgb(49, 48, 48);
+    filter: opacity(90%);
+}
+.titulogrid:hover{
+    opacity: 0;
+    transition: all 0.8s;
+    
 }
 .item:hover{
     transform: scale(1.1);
     transition: all 0.8s;
-    filter: opacity(60%);
 }
 .item1{
     background-image: url(../media/mesa_dulce_general.jpg);
@@ -206,9 +216,42 @@ article{
 #horarios{
     background-color: $color3;
 }
-form{
+.formulario{
+    padding-left: 8%;
+    padding-right: 8%;
     background-color: $color3;
+    padding-bottom: 10px;
 }
+form{
+    border: solid 2px $color4;
+    border-radius: 7px;
+    background-color: $color3;
+    align-content: center;
+    padding-bottom: 10px;
+}
+#boton{
+    margin-left: 15px;
+    padding: 10px;
+    background-color: $color1;
+    border: solid 2px $color5;
+    border-radius: 7px;
+        a{
+            color: white;
+            font-family: $font1;
+            font-size: 16px;
+            font-weight: bolder;
+            text-decoration: none;
+        }
+}
+#boton:hover{
+    background-color: $color5;
+    transition: 0.5s;
+        a{
+            color: black;
+            transition: 0.5s;
+        }
+}
+
 footer{
     color: white;
     background-color: $color1;
